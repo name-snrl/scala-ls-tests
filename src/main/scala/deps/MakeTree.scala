@@ -4,8 +4,6 @@ import java.io.File
 import java.nio.file.{Files, Path, StandardOpenOption}
 import java.util.Comparator
 
-import sbt.librarymanagement.syntax.*
-
 object MakeTree:
   def apply()(using vars: Vars, cfg: DepsCfg): Unit =
     val targets = Resolve()
