@@ -15,7 +15,7 @@
             bazel-fhs = buildFHSEnv {
               name = "bazel";
               runScript = "bazel";
-              targetPkgs = p: [ p.bazel ];
+              targetPkgs = p: [ p.bazel p.zlib ];
             };
           in
           mkShell {
