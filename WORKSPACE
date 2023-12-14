@@ -38,12 +38,9 @@ rules_proto_toolchains()
 
 mezel_version = "216327ab2fc6d5866f13ace1bf75c9d1abdcd8a6"
 
-http_archive(
+local_repository(
     name = "mezel",
-    sha256 = "dbdb144fc943670dc1b715629f939d8f5010ae1b2ab889b3620866ce19cda1df",
-    strip_prefix = "mezel-%s" % mezel_version,
-    type = "zip",
-    url = "https://github.com/valdemargr/mezel/archive/%s.zip" % mezel_version,
+    path = "../mezel",
 )
 
 load("@mezel//rules:load_mezel.bzl", "load_mezel")
