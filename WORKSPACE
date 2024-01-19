@@ -48,8 +48,8 @@ load("@rules_scala3//mezel_compatibility:repositories.bzl", "mezel_compatibility
 
 mezel_compatibility_repository(
     name = "mezel",
-    mezel_version = "216327ab2fc6d5866f13ace1bf75c9d1abdcd8a6",
-    sha256 = "dbdb144fc943670dc1b715629f939d8f5010ae1b2ab889b3620866ce19cda1df",
+    mezel_version = "26e2075e3fd193411bc584b0a9f278a4d6011ba1",
+    sha256 = "a9a5f6f7c27ce4cb4561b088f0c92f09e0787a5b97d649f2b77483ace882ecd5",
 )
 
 load("@mezel//rules:load_mezel.bzl", "load_mezel")
