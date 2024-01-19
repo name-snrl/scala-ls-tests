@@ -35,7 +35,7 @@ load("@annex//:defs.bzl", annex_pinned_maven_install = "pinned_maven_install")
 
 annex_pinned_maven_install()
 
-scala_register_toolchains(enable_semanticdb = True)
+scala_register_toolchains()
 
 # protobuf
 load("@rules_scala3//rules/scala:init.bzl", "rules_scala3_init")
