@@ -8,6 +8,7 @@ scala_toolchain(
     strict_deps_mode = "error",
     unused_dependency_checker_mode = "error",
     dependency_tracking_method = "ast",
+    scalacopts = ["-Xfatal-warnings"],
 )
 
 toolchain(
