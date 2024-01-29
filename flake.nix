@@ -25,7 +25,6 @@
               sbt
               jdk17
               scalafmt
-              neovim-unwrapped
               metals
               vscode-fhs
             ];
