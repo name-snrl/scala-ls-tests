@@ -27,18 +27,7 @@
               scalafmt
               neovim-unwrapped
               metals
-              #(vscode-with-extensions.override {
-              #  vscodeExtensions = [
-              #    (vscode-utils.buildVscodeMarketplaceExtension {
-              #      mktplcRef = {
-              #        name = "metals";
-              #        publisher = "scalameta";
-              #        version = "1.27.0";
-              #        sha256 = "sha256-ilqr0Z56553FtBG/e0cmu1uwUbWFSGe2mxfkTt6uyZs=";
-              #      };
-              #    })
-              #  ];
-              #})
+              vscode-fhs
             ];
           };
       });
