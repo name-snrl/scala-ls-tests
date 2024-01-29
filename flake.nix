@@ -8,14 +8,14 @@
 
   outputs = { self, nixpkgs, flake-utils }:
     flake-utils.lib.eachDefaultSystem (system:
-      with nixpkgs.legacyPackages.${system};
+      with import nixpkgs { inherit system; config.allowUnfree = true; };
       {
         devShells.default =
           let
             bazel-fhs = buildFHSEnv {
               name = "bazel";
               runScript = "bazel";
-              targetPkgs = p: [ p.bazel ];
+              targetPkgs = p: [ p.bazel p.zlib ];
             };
           in
           mkShell {
@@ -25,6 +25,8 @@
               sbt
               jdk17
               scalafmt
+              metals
+              vscode-fhs
             ];
           };
       });

@@ -1,6 +1,6 @@
 package rules_scala3.deps
 
-import sbt.librarymanagement.{Artifact, ModuleID, ModuleReport}
+import sbt.librarymanagement.{Artifact, ModuleReport}
 
 final case class Target(
     coordinates: Coordinates,
