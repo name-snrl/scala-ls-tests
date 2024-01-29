@@ -1,0 +1,16 @@
+load("@rules_scala3//rules:scala.bzl", "scala_binary")
+
+scala_binary(
+    name = "deps",
+    srcs = glob(["*.scala"]),
+    main_class = "rules_scala3.deps.Deps",
+    resource_strip_prefix = "src/main/resources",
+    resources = ["//src/main/resources:templates/jar_artifact_callback.bzl"],
+    visibility = ["//visibility:public"],
+    deps = [
+        "@maven//:com_github_scopt_scopt_3",
+        "@maven//:org_scala_sbt_librarymanagement_core_3",
+        "@maven//:org_scala_sbt_librarymanagement_coursier_3",
+        "@maven//:org_scala_sbt_util_logging_3",
+    ],
+)

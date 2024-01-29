@@ -1,7 +1,6 @@
 package rules_scala3.deps
 
 import sbt.librarymanagement.{ModuleID, ModuleReport}
-import java.io.File
 
 enum Language(val asString: String):
   case Scala extends Language("scala")
