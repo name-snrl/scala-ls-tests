@@ -1,5 +1,5 @@
 {"argv":[
-  "java","-jar","/home/name_snrl/work/metals_integration/mezel/target/mezel.jar",
+  "bazel", "run", "@mezel//rules:mezel_binary", "--",
   "--build-arg", "--extra_toolchains=@scala3_mezel_toolchain//:toolchain",
   "--aquery-arg", "--extra_toolchains=@scala3_mezel_toolchain//:toolchain"
 ],"bspVersion":"2.0.0","languages":["scala"],"name":"Mezel","version":"1.0.0"}
